@@ -5,7 +5,7 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 	.config(["entityApiProvider", function (entityApiProvider) {
 		entityApiProvider.baseUrl = "/services/ts/pet-store/gen/api/entities/PetsService.ts";
 	}])
-	.controller('PageController', ['$scope', 'messageHub', 'entityApi', 'Extensions', function ($scope, messageHub, entityApi, Extensions) {
+	.controller('PageController', ['$scope', '$http', 'messageHub', 'entityApi', 'Extensions', function ($scope, $http, messageHub, entityApi, Extensions) {
 
 		$scope.dataPage = 1;
 		$scope.dataCount = 0;
@@ -107,12 +107,14 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 			messageHub.showDialogWindow("Pets-details", {
 				action: "select",
 				entity: entity,
+				optionsTypes: $scope.optionsTypes,
 			});
 		};
 
 		$scope.openFilter = function (entity) {
 			messageHub.showDialogWindow("Pets-filter", {
 				entity: $scope.filterEntity,
+				optionsTypes: $scope.optionsTypes,
 			});
 		};
 
@@ -121,6 +123,7 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 			messageHub.showDialogWindow("Pets-details", {
 				action: "create",
 				entity: {},
+				optionsTypes: $scope.optionsTypes,
 			}, null, false);
 		};
 
@@ -128,6 +131,7 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 			messageHub.showDialogWindow("Pets-details", {
 				action: "update",
 				entity: entity,
+				optionsTypes: $scope.optionsTypes,
 			}, null, false);
 		};
 
@@ -159,5 +163,28 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 				}
 			});
 		};
+
+		//----------------Dropdowns-----------------//
+		$scope.optionsTypes = [];
+
+
+		$http.get("/services/ts/pet-store/gen/api/entities/TypesService.ts").then(function (response) {
+			$scope.optionsTypes = response.data.map(e => {
+				return {
+					value: e.Id,
+					text: e.Name
+				}
+			});
+		});
+
+		$scope.optionsTypesValue = function (optionKey) {
+			for (let i = 0; i < $scope.optionsTypes.length; i++) {
+				if ($scope.optionsTypes[i].value === optionKey) {
+					return $scope.optionsTypes[i].text;
+				}
+			}
+			return null;
+		};
+		//----------------Dropdowns-----------------//
 
 	}]);

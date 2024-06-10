@@ -5,11 +5,13 @@
  */
 exports.getTile = function () {
     return {
-        group: "Entities",
+        group: "pet-store",
         name: "Pets",
         caption: "Manage entity Pets",
         tooltip: "Pets",
-        // icon: "file-o",
+        type: "PRIMARY",
+        report: "false",
+        icon: "/services/web/resources/unicons/file.svg",
         location: "/services/web/pet-store/gen/ui/entities/index.html",
         order: "100",
         groupOrder: "100",

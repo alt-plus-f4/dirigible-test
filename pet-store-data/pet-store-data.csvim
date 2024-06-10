@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "table": "TYPES",
+      "schema": "PUBLIC",
+      "file": "/pet-store-data/pets.csv",
+      "header": true,
+      "useHeaderNames": true,
+      "delimField": ",",
+      "delimEnclosing": "\"",
+      "distinguishEmptyFromNull": true,
+      "version": "1.0.0"
+    }
+  ]
+}
