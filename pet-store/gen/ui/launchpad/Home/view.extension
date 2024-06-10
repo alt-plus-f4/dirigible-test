@@ -1,0 +1,5 @@
+{
+    "module": "pet-store/gen/ui/launchpad/Home/view.js",
+    "extensionPoint": "pet-store-view",
+    "description": "pet-store - Application View"
+}

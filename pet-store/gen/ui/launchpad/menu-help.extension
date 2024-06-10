@@ -1,0 +1,5 @@
+{
+    "module": "pet-store/gen/ui/launchpad/menu-help.js",
+    "extensionPoint": "pet-store-menu",
+    "description": "pet-store - Application Menu"
+}

@@ -1,0 +1,73 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "PETS",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "precision": "NaN",
+                        "scale": "NaN",
+                        "name": "PETS_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "precision": "NaN",
+                        "scale": "NaN",
+                        "nullable": true,
+                        "name": "PETS_NAME"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 20,
+                        "precision": "NaN",
+                        "scale": "NaN",
+                        "nullable": true,
+                        "name": "PETS_AGE"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PETS_TYPES"
+                    }
+                ]
+            },
+            {
+                "name": "TYPES",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "TYPES_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "TYPES_NAME"
+                    }
+                ]
+            },
+            {
+                "name": "Pets_Types",
+                "type": "foreignKey",
+                "table": "PETS",
+                "constraintName": "Pets_Types",
+                "columns": "PETS_TYPES",
+                "referencedTable": "TYPES",
+                "referencedColumns": "TYPES_ID"
+            }
+        ]
+    },
+    "datasource": "DefaultDB"
+}
