@@ -7,34 +7,23 @@
                 "columns": [
                     {
                         "type": "INTEGER",
-                        "length": 0,
                         "primaryKey": true,
                         "identity": true,
-                        "precision": "NaN",
-                        "scale": "NaN",
                         "name": "PETS_ID"
                     },
                     {
                         "type": "VARCHAR",
                         "length": 20,
-                        "precision": "NaN",
-                        "scale": "NaN",
                         "nullable": true,
                         "name": "PETS_NAME"
                     },
                     {
                         "type": "INTEGER",
-                        "length": 20,
-                        "precision": "NaN",
-                        "scale": "NaN",
                         "nullable": true,
                         "name": "PETS_AGE"
                     },
                     {
                         "type": "INTEGER",
-                        "length": 0,
-                        "precision": "NaN",
-                        "scale": "NaN",
                         "nullable": true,
                         "name": "PETS_TYPES"
                     }
@@ -46,7 +35,6 @@
                 "columns": [
                     {
                         "type": "INTEGER",
-                        "length": 0,
                         "primaryKey": true,
                         "identity": true,
                         "nullable": true,

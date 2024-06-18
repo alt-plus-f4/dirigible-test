@@ -1,0 +1,7 @@
+{
+    "parameters": [],
+    "group": "dirigible_job",
+    "handler": "pet-store/javascript-esm.mjs",
+    "expression": "0 0/1 * 1/1 * ? *",
+    "description": "check db"
+}

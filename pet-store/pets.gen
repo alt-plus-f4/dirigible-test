@@ -1,0 +1,15 @@
+{
+  "tablePrefix": "PET",
+  "brand": "pet",
+  "brandUrl": "pet",
+  "title": "pet",
+  "description": "pet",
+  "addOpenApiInfo": true,
+  "projectName": "pet-store",
+  "workspaceName": "workspace",
+  "filePath": "pets.model",
+  "templateId": "template-application-angular/template/template.js",
+  "fileName": "pets",
+  "perspectives": {},
+  "models": []
+}

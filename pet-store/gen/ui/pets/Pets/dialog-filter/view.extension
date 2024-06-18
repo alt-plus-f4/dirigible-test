@@ -1,0 +1,5 @@
+{
+    "module": "pet-store/gen/ui/pets/Pets/dialog-filter/view.js",
+    "extensionPoint": "pet-store-dialog-window",
+    "description": "pet-store - Application Dialog Window"
+}

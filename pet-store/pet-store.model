@@ -7,7 +7,6 @@
                         "calculatedPropertyExpressionCreate": "",
                         "calculatedPropertyExpressionUpdate": "",
                         "dataAutoIncrement": "true",
-                        "dataLength": "0",
                         "dataName": "PETS_ID",
                         "dataNullable": "false",
                         "dataPrecision": "NaN",
@@ -47,7 +46,6 @@
                         "calculatedPropertyExpressionCreate": "",
                         "calculatedPropertyExpressionUpdate": "",
                         "dataAutoIncrement": "false",
-                        "dataLength": "20",
                         "dataName": "PETS_AGE",
                         "dataNullable": "true",
                         "dataPrecision": "NaN",
@@ -67,7 +65,6 @@
                         "calculatedPropertyExpressionCreate": "",
                         "calculatedPropertyExpressionUpdate": "",
                         "dataAutoIncrement": "false",
-                        "dataLength": "0",
                         "dataName": "PETS_TYPES",
                         "dataNullable": "true",
                         "dataPrecision": "NaN",
@@ -86,7 +83,7 @@
                         "widgetType": "DROPDOWN",
                         "relationshipName": "Pets_Types",
                         "relationshipEntityName": "Types",
-                        "relationshipEntityPerspectiveName": "entities",
+                        "relationshipEntityPerspectiveName": "settings",
                         "relationshipEntityPerspectiveLabel": "Entities"
                     }
                 ],
@@ -102,10 +99,10 @@
                 "menuLabel": "Pets",
                 "name": "Pets",
                 "navigationPath": "/Home",
-                "perspectiveIcon": "/services/web/resources/unicons/copy.svg",
-                "perspectiveLabel": "Entities",
-                "perspectiveName": "entities",
-                "perspectiveOrder": "100",
+                "perspectiveIcon": "/services/web/resources/unicons/adobe.svg",
+                "perspectiveLabel": "petss",
+                "perspectiveName": "pets",
+                "perspectiveOrder": "0",
                 "perspectiveRole": "",
                 "title": "Pets",
                 "tooltip": "Pets",
@@ -117,7 +114,6 @@
                         "calculatedPropertyExpressionCreate": "",
                         "calculatedPropertyExpressionUpdate": "",
                         "dataAutoIncrement": "true",
-                        "dataLength": "0",
                         "dataName": "TYPES_ID",
                         "dataNullable": "true",
                         "dataPrimaryKey": "true",
@@ -162,17 +158,32 @@
                 "menuLabel": "Types",
                 "name": "Types",
                 "navigationPath": "/Home",
-                "perspectiveIcon": "/services/web/resources/unicons/copy.svg",
-                "perspectiveLabel": "Entities",
-                "perspectiveName": "entities",
-                "perspectiveOrder": "100",
+                "perspectiveIcon": "/services/web/resources/unicons/analysis.svg",
+                "perspectiveLabel": "settings",
+                "perspectiveName": "settings",
+                "perspectiveOrder": "1",
                 "perspectiveRole": "",
                 "title": "Types",
                 "tooltip": "Types",
                 "type": "PRIMARY"
             }
         ],
-        "perspectives": [],
+        "perspectives": [
+            {
+                "name": "pets",
+                "label": "petss",
+                "icon": "/services/web/resources/unicons/adobe.svg",
+                "order": "0",
+                "role": {}
+            },
+            {
+                "name": "settings",
+                "label": "settings",
+                "icon": "/services/web/resources/unicons/analysis.svg",
+                "order": "1",
+                "role": {}
+            }
+        ],
         "navigations": []
     }
 }

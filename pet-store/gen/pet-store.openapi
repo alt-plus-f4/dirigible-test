@@ -9,10 +9,10 @@ externalDocs:
 servers:
   - url: /services/ts
 tags:
-  - name: entities
-  - name: entities
+  - name: pets
+  - name: settings
 paths:
-  /pet-store/gen/api/entities/PetsService.ts:
+  /pet-store/gen/api/pets/PetsService.ts:
     get:
       summary: List Pets
       parameters:
@@ -33,7 +33,7 @@ paths:
             type: integer
             allowEmptyValue: true
       tags:
-        - entities
+        - pets
       responses:
         200:
           description: Successful Request
@@ -64,7 +64,7 @@ paths:
     post:
       summary: Create Pets
       tags:
-        - entities
+        - pets
       requestBody:
         content:
           application/json:
@@ -96,7 +96,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pet-store/gen/api/entities/PetsService.ts/{id}:
+  /pet-store/gen/api/pets/PetsService.ts/{id}:
     get:
       summary: Get Pets by Id
       parameters:
@@ -107,7 +107,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - pets
       responses:
         200:
           description: Successful Request
@@ -145,7 +145,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - pets
       requestBody:
         content:
           application/json:
@@ -193,7 +193,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - pets
       responses:
         204:
           description: Successful Request
@@ -215,11 +215,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pet-store/gen/api/entities/PetsService.ts/count:
+  /pet-store/gen/api/pets/PetsService.ts/count:
     get:
       summary: Count the number of Pets
       tags:
-        - entities
+        - pets
       responses:
         200:
           description: Successful Request
@@ -243,7 +243,7 @@ paths:
     post:
       summary: Count the number of Pets by PetsFilterOptions
       tags:
-        - entities
+        - pets
       requestBody:
         content:
           application/json:
@@ -325,11 +325,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pet-store/gen/api/entities/PetsService.ts/search:
+  /pet-store/gen/api/pets/PetsService.ts/search:
     post:
       summary: Search Pets by PetsFilterOptions
       tags:
-        - entities
+        - pets
       requestBody:
         content:
           application/json:
@@ -412,7 +412,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pet-store/gen/api/entities/TypesService.ts:
+  /pet-store/gen/api/settings/TypesService.ts:
     get:
       summary: List Types
       parameters:
@@ -433,7 +433,7 @@ paths:
             type: integer
             allowEmptyValue: true
       tags:
-        - entities
+        - settings
       responses:
         200:
           description: Successful Request
@@ -464,7 +464,7 @@ paths:
     post:
       summary: Create Types
       tags:
-        - entities
+        - settings
       requestBody:
         content:
           application/json:
@@ -496,7 +496,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pet-store/gen/api/entities/TypesService.ts/{id}:
+  /pet-store/gen/api/settings/TypesService.ts/{id}:
     get:
       summary: Get Types by Id
       parameters:
@@ -507,7 +507,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - settings
       responses:
         200:
           description: Successful Request
@@ -545,7 +545,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - settings
       requestBody:
         content:
           application/json:
@@ -593,7 +593,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - settings
       responses:
         204:
           description: Successful Request
@@ -615,11 +615,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pet-store/gen/api/entities/TypesService.ts/count:
+  /pet-store/gen/api/settings/TypesService.ts/count:
     get:
       summary: Count the number of Types
       tags:
-        - entities
+        - settings
       responses:
         200:
           description: Successful Request
@@ -643,7 +643,7 @@ paths:
     post:
       summary: Count the number of Types by TypesFilterOptions
       tags:
-        - entities
+        - settings
       requestBody:
         content:
           application/json:
@@ -725,11 +725,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /pet-store/gen/api/entities/TypesService.ts/search:
+  /pet-store/gen/api/settings/TypesService.ts/search:
     post:
       summary: Search Types by TypesFilterOptions
       tags:
-        - entities
+        - settings
       requestBody:
         content:
           application/json:
